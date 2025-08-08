@@ -1,3 +1,34 @@
+Metadata-Version: 2.4
+Name: smirk
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: ==3.10.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru==0.7.3
+Requires-Dist: opencv-python==4.11.0.86
+Requires-Dist: tensorboardX==2.6.4
+Requires-Dist: crc32c==2.7.1
+Requires-Dist: soundfile==0.13.1
+Requires-Dist: moviepy==2.2.1
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: torch==2.4.1
+Requires-Dist: scipy>=1.15.0
+Requires-Dist: tensorboard==2.19.0
+Requires-Dist: scikit-learn==1.7.0
+Requires-Dist: pandas==2.3.1
+Requires-Dist: matplotlib==3.10.3
+Requires-Dist: omegaconf>=2.3.0
+Requires-Dist: ipykernel>=6.30.0
+Requires-Dist: pip>=25.2
+Requires-Dist: pyqt6>=6.9.1
+Requires-Dist: mediapipe>=0.10.21
+Requires-Dist: scikit-image>=0.25.2
+Requires-Dist: albumentations>=2.0.8
+Requires-Dist: pytorch3d==0.7.8+pt2.4.1cu121
+Requires-Dist: timm>=1.0.19
+Dynamic: license-file
+
 # SMIRK: 3D Facial Expressions through Analysis-by-Neural-Synthesis
 
 This is a forked version.
