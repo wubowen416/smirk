@@ -1,9 +1,1 @@
-FLAME
-base_trainer
-losses
-models
-renderer
-smirk_encoder
-smirk_generator
-smirk_trainer
-utils
+smirk
