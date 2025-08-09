@@ -50,7 +50,9 @@ def keep_vertices_and_update_faces(faces, vertices_to_keep):
 
 
 class Renderer(nn.Module):
-    def __init__(self, render_full_head=False, obj_filename="assets/head_template.obj"):
+    def __init__(
+        self, render_full_head=False, obj_filename="assets/smirk/head_template.obj"
+    ):
         super(Renderer, self).__init__()
         self.image_size = 224
 
@@ -70,7 +72,7 @@ class Renderer(nn.Module):
         )
 
         flame_masks = pickle.load(
-            open("assets/FLAME_masks/FLAME_masks.pkl", "rb"), encoding="latin1"
+            open("assets/smirk/FLAME_masks/FLAME_masks.pkl", "rb"), encoding="latin1"
         )
         self.flame_masks = flame_masks
 

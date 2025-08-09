@@ -13,16 +13,16 @@ password=$(urle $password)
 echo -e "\nDownloading FLAME..."
 mkdir -p data/FLAME2020/
 wget --post-data "username=$username&password=$password" 'https://download.is.tue.mpg.de/download.php?domain=flame&sfile=FLAME2020.zip&resume=1' -O './FLAME2020.zip' --no-check-certificate --continue
-unzip FLAME2020.zip -d assets/FLAME2020/
+unzip FLAME2020.zip -d assets/smirk/FLAME2020/
 rm FLAME2020.zip
 
 echo -e "\nDownloading Mediapipe Face Mesh model..."
-wget https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task --directory-prefix assets/
+wget https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task --directory-prefix assets/smirk/
 
 # Download SMIRK pretrained model
 echo -e "\nDownload pretrained SMIRK model..."
-mkdir -p pretrained_models/
-gdown --id 1T65uEd9dVLHgVw5KiUYL66NUee-MCzoE -O pretrained_models/
+mkdir -p assets/smirk/pretrained_models/
+gdown --id 1T65uEd9dVLHgVw5KiUYL66NUee-MCzoE -O assets/smirk/pretrained_models/
 
 
 
@@ -32,7 +32,7 @@ echo -e "\n Now downloading the files needed if you want to train SMIRK..."
 # Download expression templates
 echo -e "\nDownload expression templates for SMIRK training..."
 gdown --id 1wEL7KPHw2kl5DxP0UAB3h9QcQLXk7BM_
-unzip -q expression_templates_famos.zip -d assets/
+unzip -q expression_templates_famos.zip -d assets/smirk/
 rm expression_templates_famos.zip
 
 # Download EMOCA for expression loss
@@ -48,12 +48,12 @@ while true; do
 done
 
 wget https://download.is.tue.mpg.de/emoca/assets/EmotionRecognition/image_based_networks/ResNet50.zip -O ResNet50.zip
-unzip ResNet50.zip -d assets/
+unzip ResNet50.zip -d assets/smirk/
 rm ResNet50.zip
 
 # Download MICA
 echo -e "\nDownloading MICA..."
-wget -O assets/mica.tar "https://keeper.mpdl.mpg.de/f/db172dc4bd4f4c0f96de/?dl=1"
+wget -O assets/smirk/mica.tar "https://keeper.mpdl.mpg.de/f/db172dc4bd4f4c0f96de/?dl=1"
 
 
 echo -e "\nFinished downloading all files."
